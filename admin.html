@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex"><title>Goga Ji Gud – Admin</title>
+<style>
+:root{--g:#1f7a45;--gd:#0b1d12;--gl:#e6f3ea;--bg:#f3f7f1;--ink:#13241a;--mu:#5f7366;--ln:#d3e0d3;--w:#fff}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1a12;--w:#15251b;--ink:#e9f3e6;--mu:#9db3a3;--ln:#2a4033;--gl:#1b3a29}}
+*{box-sizing:border-box;margin:0}body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--ink);padding:0 0 40px;font-size:15px}
+header{background:var(--gd);color:#e9f3e6;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:5}
+header b{font-size:1.1rem;letter-spacing:.08em}button,select,input{font:inherit}
+.b{background:var(--g);color:#fff;border:0;border-radius:10px;padding:10px 16px;cursor:pointer;font-weight:600}.b.s{background:none;border:1px solid #6fd898;color:#6fd898;padding:7px 12px}
+main{max-width:1000px;margin:auto;padding:16px}
+#login{max-width:340px;margin:18vh auto;background:var(--w);padding:26px;border-radius:16px;border:1px solid var(--ln);text-align:center}
+input,select{width:100%;padding:12px;border:1px solid var(--ln);border-radius:10px;background:var(--w);color:var(--ink);font-size:16px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px}@media(min-width:700px){.stats{grid-template-columns:repeat(4,1fr)}}
+.st{background:var(--w);border:1px solid var(--ln);border-radius:14px;padding:14px}.st small{color:var(--mu);display:block}.st b{font-size:1.6rem;color:var(--g)}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;align-items:center}.bar select{width:auto}
+.o{background:var(--w);border:1px solid var(--ln);border-radius:14px;padding:14px;margin-bottom:12px}.o.n{border-left:5px solid var(--g)}
+.o h3{font-size:1rem;display:flex;justify-content:space-between;gap:8px}.o p{margin:4px 0;color:var(--mu);font-size:.9rem}.o .t{color:var(--ink);font-weight:600}
+.act{display:flex;gap:8px;margin-top:10px}.act select{flex:1}.act a{background:#25d366;color:#fff;text-decoration:none;border-radius:10px;padding:11px 14px;font-weight:600}
+.set{background:var(--w);border:1px solid var(--ln);border-radius:14px;padding:14px;margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;align-items:end}.set label{flex:1;min-width:120px;font-size:.85rem;color:var(--mu)}
+#msg{color:#b3261e;margin-top:10px;font-size:.9rem}
+</style></head><body>
+<header><b>🌿 GOGA JI GUD · ADMIN</b><span><button class="b s" id="rf" hidden>Refresh</button> <button class="b s" id="lo" hidden>Logout</button></span></header>
+<div id="login"><h2 style="margin-bottom:14px">Admin Login</h2><input id="pw" type="password" placeholder="Admin password" autocomplete="current-password"><button class="b" id="go" style="width:100%;margin-top:12px">Login</button><div id="msg"></div></div>
+<main id="app" hidden>
+<div class="stats" id="stats"></div>
+<div class="bar"><select id="fl"><option value="">All orders</option></select><span id="cnt" style="color:var(--mu)"></span></div>
+<div id="list"></div>
+<div class="set"><label>Price per kg (₹)<input id="rt" type="number" min="1"></label><label>COD charge (₹)<input id="cf" type="number" min="0"></label><button class="b" id="sv">Save</button></div>
+</main>
+<script>
+var key=sessionStorage.getItem('gj_admin')||'',data=null;
+function $(i){return document.getElementById(i)}
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!==undefined)e.textContent=x;return e}
+function api(p,o){o=o||{};o.headers=Object.assign({'X-Admin-Key':key,'Content-Type':'application/json'},o.headers||{});return fetch(p,o).then(function(r){if(r.status===401||r.status===503)return r.json().then(function(j){throw new Error(j.detail)});if(!r.ok)throw new Error('Error '+r.status);return r.json()})}
+function m(v){return '₹'+Math.round(v).toLocaleString('en-IN')}
+function load(){return api('/api/admin/orders').then(function(d){data=d;$('login').hidden=true;$('app').hidden=false;$('rf').hidden=false;$('lo').hidden=false;draw()}).catch(function(e){sessionStorage.removeItem('gj_admin');$('login').hidden=false;$('app').hidden=true;$('msg').textContent=e.message})}
+function draw(){var s=data.stats,st=$('stats');st.textContent='';
+[['Total orders',s.orders],['New',s.new],['Kg ordered',s.kg],['Order value',m(s.revenue)]].forEach(function(a){var d=el('div','st');d.appendChild(el('small','',a[0]));d.appendChild(el('b','',a[1]));st.appendChild(d)});
+var fl=$('fl');if(fl.options.length===1)data.statuses.forEach(function(x){var o=el('option','',x);o.value=x;fl.appendChild(o)});
+$('rt').value=data.settings.rate;$('cf').value=data.settings.cod_fee;
+var L=$('list');L.textContent='';var rows=data.orders.filter(function(o){return !fl.value||o.status===fl.value});$('cnt').textContent=rows.length+' shown';
+if(!rows.length)L.appendChild(el('p','', 'No orders yet.'));
+rows.forEach(function(o){var c=el('div','o'+(o.status==='New'?' n':''));var h=el('h3');h.appendChild(el('span','',o.id));h.appendChild(el('span','',o.created.replace('T',' ').slice(0,16)));c.appendChild(h);
+c.appendChild(el('p','t',o.name+' · '+o.phone));c.appendChild(el('p','',o.address+', '+o.country));
+c.appendChild(el('p','',o.items.map(function(i){return i.name+' × '+i.kg+' kg'}).join(', ')));
+c.appendChild(el('p','t','Total '+m(o.total)+' ('+o.payment+')'));
+var a=el('div','act'),sel=el('select');data.statuses.forEach(function(x){var op=el('option','',x);op.value=x;if(x===o.status)op.selected=true;sel.appendChild(op)});
+sel.onchange=function(){api('/api/admin/orders/'+encodeURIComponent(o.id),{method:'PATCH',body:JSON.stringify({status:sel.value})}).then(load)};
+a.appendChild(sel);var ph=o.phone.replace(/\D/g,'');if(ph.length===10)ph='91'+ph;var w=el('a','', 'WhatsApp');w.href='https://wa.me/'+ph;w.target='_blank';w.rel='noopener';a.appendChild(w);c.appendChild(a);L.appendChild(c)})}
+$('go').onclick=function(){key=$('pw').value;sessionStorage.setItem('gj_admin',key);$('msg').textContent='';load()};
+$('pw').onkeydown=function(e){if(e.key==='Enter')$('go').click()};
+$('fl').onchange=draw;$('rf').onclick=load;$('lo').onclick=function(){sessionStorage.removeItem('gj_admin');location.reload()};
+$('sv').onclick=function(){api('/api/admin/settings',{method:'PUT',body:JSON.stringify({rate:+$('rt').value,cod_fee:+$('cf').value})}).then(function(){alert('Saved');load()}).catch(function(e){alert(e.message)})};
+if(key)load();
+</script></body></html>

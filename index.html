@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Goga Ji Gud – Pure Desi Jaggery</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--blk:#0b1d12;--blk2:#12301f;--iv:#f3f7ef;--iv2:#e3eeda;--ink:#13241a;--mute:#5a6f60;--gold:#2e7d4a;--gold2:#9fe0b0;--line:#cddbc6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--iv:#0f1a13;--iv2:#15241a;--ink:#e9f3e6;--mute:#9db3a3;--line:#2a4033;--gold:#5fd08a}}
+:root[data-theme="dark"]{--iv:#0f1a13;--iv2:#15241a;--ink:#e9f3e6;--mute:#9db3a3;--line:#2a4033;--gold:#5fd08a}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{background:var(--iv);color:var(--ink);font-family:'Jost',system-ui,sans-serif;font-weight:300;line-height:1.75;letter-spacing:.01em}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.08}
+a{color:inherit;text-decoration:none}
+.lb{font-size:.7rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:400}
+.ln{width:56px;height:1px;background:var(--gold);margin:22px 0}
+header{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:calc(18px + env(safe-area-inset-top,0px)) 5vw 18px;color:#f1f8ee;transition:.4s}
+header.s{background:#0b1d12ee;backdrop-filter:blur(10px);padding-top:calc(12px + env(safe-area-inset-top,0px));padding-bottom:12px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500}.logo span{display:block;font-family:'Jost';font-size:.55rem;letter-spacing:.5em;color:var(--gold);margin-top:-2px;text-align:center}
+nav{display:flex;gap:34px}nav a{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;opacity:.85}nav a:hover{color:var(--gold2);opacity:1}
+.cartbtn{background:none;border:1px solid var(--gold);color:#f1f8ee;padding:9px 20px;font:400 .7rem 'Jost';letter-spacing:.22em;text-transform:uppercase;cursor:pointer;transition:.3s}.cartbtn:hover{background:var(--gold);color:#0b1d12}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#f1f8ee;background:#0b1d12 center/cover}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0b1d12f2 0,#0b1d12b8 45%,#0b1d1255 100%),linear-gradient(0deg,#0b1d12 0,transparent 30%)}
+.hc{position:relative;padding:130px 5vw 90px;max-width:760px;margin-left:max(0px,calc((100vw - 1240px)/2))}
+.hero h1{font-size:clamp(3rem,7.4vw,6.4rem);font-weight:400;margin:18px 0 0}.hero h1 em{color:var(--gold2)}
+.hero p{max-width:480px;color:#cfe0d2;font-size:1.02rem}
+.btn{display:inline-block;border:1px solid var(--gold);background:var(--gold);color:#0b1d12;padding:15px 38px;font:400 .72rem 'Jost';letter-spacing:.26em;text-transform:uppercase;cursor:pointer;transition:.3s}
+.btn:hover{background:transparent;color:var(--gold2)}.btn.o{background:none;color:var(--gold2)}.btn.o:hover{background:var(--gold);color:#0b1d12}
+.hero .row2{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px}
+.sc{position:absolute;bottom:26px;left:50%;font-size:.6rem;letter-spacing:.4em;text-transform:uppercase;color:#cfe0d2;opacity:.7}
+.mq{background:var(--blk);color:var(--gold2);padding:18px 0;overflow:hidden;white-space:nowrap;border-block:1px solid #4fae6a44}
+.mq div{display:inline-block;animation:mq 38s linear infinite;font-family:'Cormorant Garamond';font-style:italic;font-size:1.25rem;letter-spacing:.08em}.mq span{margin:0 34px;color:var(--gold)}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:110px 5vw}.w{max-width:1240px;margin:auto}
+.sh{text-align:center;margin-bottom:64px}.sh h2{font-size:clamp(2.4rem,5vw,4rem);margin-top:12px}.sh .ln{margin:22px auto}.sh p{color:var(--mute);max-width:520px;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:48px 34px}
+.card .im{overflow:hidden;position:relative;background:var(--iv2)}.card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}.card:hover img{transform:scale(1.07)}
+.bd{position:absolute;top:0;left:0;background:var(--blk);color:var(--gold2);font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;padding:8px 16px}
+.cb{padding:22px 2px 0;text-align:center}.cb h3{font-size:1.9rem}.cb p{font-size:.88rem;color:var(--mute);margin:8px 0 14px;min-height:3.2em}
+.pr{font-family:'Cormorant Garamond';font-size:1.7rem;color:var(--gold)}.pr small{font:300 .72rem 'Jost';letter-spacing:.2em;color:var(--mute);text-transform:uppercase}
+.row{display:flex;gap:0;margin-top:16px}
+select{flex:0 0 38%;padding:13px 10px;border:1px solid var(--line);border-right:0;background:transparent;color:var(--ink);font:300 .85rem 'Jost'}
+.add{flex:1;background:var(--blk);color:var(--gold2);border:1px solid var(--blk);padding:13px;font:400 .68rem 'Jost';letter-spacing:.22em;text-transform:uppercase;cursor:pointer;transition:.3s}.add:hover{background:var(--gold);border-color:var(--gold);color:#0b1d12}
+.dark{background:var(--blk);color:#f1f8ee}.dark .sh p,.dark .tx p{color:#a9c2b0}
+.film{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;align-items:center}
+.vw{position:relative;width:min(340px,100%);margin:auto}.vw:before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--gold)}
+.vid{position:relative;aspect-ratio:9/16;background:#000;overflow:hidden}.vid video{width:100%;height:100%;object-fit:cover;display:block}
+.tx h2{font-size:clamp(2.3rem,4.6vw,3.8rem);margin:14px 0}.tx p{color:var(--mute);margin-bottom:16px;max-width:520px}
+.pil{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:38px;border-top:1px solid #4fae6a44;padding-top:30px}.pil b{display:block;font-family:'Cormorant Garamond';font-size:2.2rem;color:var(--gold);font-weight:400}.pil span{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}.about img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.ul{list-style:none;padding:0;margin-top:24px}.ul li{padding:13px 0;border-bottom:1px solid var(--line);font-size:.92rem}.ul li:before{content:"—";color:var(--gold);margin-right:14px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;border:1px solid var(--line)}.steps div{padding:38px 28px;border-right:1px solid var(--line)}.steps div:last-child{border:0}
+.steps i{font:italic 400 2.6rem 'Cormorant Garamond';color:var(--gold);display:block}.steps h3{font-size:1.5rem;margin:6px 0}.steps p{font-size:.86rem;color:var(--mute)}
+.cta2{position:relative;text-align:center;color:#f1f8ee;padding:150px 5vw;background:#0b1d12 center/cover}.cta2:before{content:"";position:absolute;inset:0;background:#0b1d12cc}.cta2>*{position:relative}.cta2 h2{font-size:clamp(2.4rem,5.5vw,4.6rem);margin:14px 0 30px}
+details{border-bottom:1px solid var(--line);padding:22px 0}summary{cursor:pointer;font:500 1.5rem 'Cormorant Garamond';list-style:none;display:flex;justify-content:space-between}summary:after{content:"+";color:var(--gold)}details[open] summary:after{content:"–"}details p{margin-top:10px;color:var(--mute);font-size:.92rem;max-width:640px}
+footer{background:var(--blk);color:#a9c2b0;padding:80px 5vw 30px;font-size:.85rem}.fg{max-width:1240px;margin:auto;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:50px}footer .logo{color:#f1f8ee;display:inline-block}footer h4{font:400 .68rem 'Jost';letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}footer a{display:block;padding:4px 0}footer a:hover{color:var(--gold2)}
+.cp{max-width:1240px;margin:56px auto 0;padding-top:22px;border-top:1px solid #4fae6a33;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;opacity:.7}
+.wa{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:19;background:var(--blk);border:1px solid var(--gold);color:var(--gold2);padding:13px 22px;font:400 .68rem 'Jost';letter-spacing:.22em;text-transform:uppercase}
+#ov{position:fixed;inset:0;background:#000a;display:none;z-index:30}#ov.o{display:block}
+#dr{position:fixed;top:0;right:0;bottom:0;width:min(450px,100%);background:var(--iv);color:var(--ink);z-index:31;transform:translateX(100%);transition:.45s cubic-bezier(.2,.7,.2,1);padding:26px;padding-top:calc(26px + env(safe-area-inset-top,0px));padding-bottom:calc(30px + env(safe-area-inset-bottom,0px));overflow-y:auto}#dr.o{transform:none}
+#dr h2{font-size:2.2rem}.ci{display:flex;justify-content:space-between;gap:8px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.9rem}.ci button{background:none;border:0;color:var(--gold);cursor:pointer;font:inherit;font-size:.75rem;letter-spacing:.1em}
+input,textarea{width:100%;padding:13px 0;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);font:300 .95rem 'Jost';margin-top:6px;outline:0}input:focus,textarea:focus{border-color:var(--gold)}
+.pm{display:flex;align-items:center;border:1px solid var(--line);padding:13px 14px;margin-top:10px;font-size:.85rem}.pm.d{opacity:.45}.pm input{width:auto;margin:0 12px 0 0}
+.sum{font-size:.9rem;margin:18px 0;line-height:2}.sum b{font:500 1.7rem 'Cormorant Garamond';color:var(--gold)}
+.js .rv{opacity:0;transform:translateY(28px);transition:1s cubic-bezier(.2,.7,.2,1)}.js .rv.in{opacity:1;transform:none}
+@media(max-width:860px){nav{display:none}.film,.about,.fg{grid-template-columns:1fr;gap:56px}.pil{gap:14px}section{padding:76px 6vw}.hero:before{background:linear-gradient(0deg,#0b1d12f5 25%,#0b1d1299)}.hc{padding-top:140px}.steps div{border-right:0;border-bottom:1px solid var(--line)}.logo{font-size:1.2rem}}
+
+.dark,.hero,footer,.cta2,.mq,header,#bar,.btn{--gold:#6fd898;--gold2:#b9ecc9}
+.hero{min-height:100svh}.hr{display:flex;gap:10px;align-items:center}
+.mnb{display:none;background:none;border:1px solid var(--gold);color:#f1f8ee;width:42px;height:38px;font-size:1.2rem;cursor:pointer}
+.st{display:flex;align-items:center;justify-content:space-between;flex:0 0 46%;border:1px solid var(--line);padding:0 2px}.st button{width:42px;height:46px;background:none;border:0;color:var(--ink);font-size:1.4rem;cursor:pointer}.st span{font-size:.92rem}.st b{font-weight:500}
+.qs{display:inline-flex;align-items:center;gap:10px;margin-top:6px}.qs button{width:32px;height:32px;border:1px solid var(--line);color:var(--ink);font-size:1.1rem;letter-spacing:0}
+.tabs{display:flex;margin:18px 0 6px;border-bottom:1px solid var(--line)}.tabs button{flex:1;padding:13px;background:none;border:0;border-bottom:2px solid transparent;color:var(--mute);font:400 .72rem 'Jost';letter-spacing:.2em;text-transform:uppercase;cursor:pointer}.tabs button.on{color:var(--gold);border-color:var(--gold)}
+.ok{text-align:center;padding:30px 0}.ok h3{font-size:2.2rem}.ok .btn{margin-top:20px}
+.o1{border:1px solid var(--line);padding:14px;margin-top:12px;font-size:.88rem;line-height:1.8}.stt{display:inline-block;padding:1px 10px;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;background:var(--blk);color:#6fd898}
+#bar{position:fixed;left:0;right:0;bottom:0;z-index:25;display:none;align-items:center;justify-content:space-between;gap:12px;background:var(--blk);color:#f1f8ee;padding:12px 5vw calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid #4fae6a77}
+#bar.pop{animation:pp .4s}@keyframes pp{50%{transform:translateY(-6px)}}
+nav.open{display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:#0b1d12f7;padding:22px 6vw;gap:20px;border-bottom:1px solid #4fae6a55}
+@media(max-width:860px){#bar.on{display:flex}.mnb{display:block}.wa{bottom:calc(86px + env(safe-area-inset-bottom,0px));padding:11px 16px}input,textarea{font-size:16px}footer{padding-bottom:110px}.grid{gap:40px 20px}.add,.st{min-height:46px}.cartbtn{padding:9px 14px}}
+</style>
+</head>
+<body>
+<header id="hd"><a class="logo" href="#">Goga Ji<span>PURE DESI GUD</span></a><nav id="nv"><a href="#shop">Collection</a><a href="#craft">The Craft</a><a href="#about">Story</a><a href="#how">Order</a><a href="#faq">FAQ</a></nav><div class="hr"><button class="mnb" id="mn" aria-label="Menu">☰</button><button class="cartbtn" id="cb">Cart (<span id="cc">0</span>)</button></div></header>
+
+<div class="hero" id="hero"><div class="hc">
+<span class="lb">खालिस देसी गुड़</span>
+<h1>Pure Gud.<br><em>Pure Tradition.</em></h1>
+<div class="ln"></div>
+<p>Slow-cooked from sugarcane, studded with almonds, cashews and raisins. A natural, chemical-free alternative to refined white sugar — delivered across India and worldwide.</p>
+<div class="row2"><a class="btn" href="#shop">Shop the Collection</a><a class="btn o" href="#craft">Watch Our Craft</a></div></div>
+<div class="sc">Scroll</div></div>
+
+<div class="mq"><div id="mq"></div></div>
+
+<section id="shop"><div class="w"><div class="sh rv"><span class="lb">The Collection</span><h2>Five Signature Gud</h2><div class="ln"></div><p>Each block is cut fresh and packed with care.</p></div><div class="grid" id="g"></div></div></section>
+
+<section class="dark" id="craft"><div class="w film">
+<div class="vw rv"><div class="vid"><video src="assets/ad.mp4" autoplay muted loop playsinline preload="auto"></video></div></div>
+<div class="tx rv"><span class="lb">The Craft</span><h2>Made the way it was always meant to be</h2><div class="ln"></div>
+<p>Fresh sugarcane juice, cooked slowly over a steady flame until it turns into soft, fragrant jaggery. No bleach. No shortcuts. Just the honest sweetness of the village.</p>
+<p>Our dry-fruit varieties are generously loaded with almonds, cashews and raisins for a richer, fuller bite.</p>
+<div class="pil"><div><b>100%</b><span>Desi Recipe</span></div><div><b>0</b><span>Added Chemicals</span></div><div><b>5</b><span>Varieties</span></div></div></div>
+</div></section>
+
+<section id="about"><div class="w about">
+<img class="rv" alt="Pure desi gud" data-img="plain">
+<div class="rv"><span class="lb">Our Story</span><h2 style="font-size:clamp(2.3rem,4.6vw,3.8rem);margin-top:14px">From the cane field to your kitchen</h2><div class="ln"></div>
+<p style="color:var(--mute);max-width:480px">Goga Ji Gud brings the taste of traditional village jaggery to homes everywhere. Stir it into tea or milk, melt it into sweets, or enjoy a piece after a meal.</p>
+<ul class="ul"><li>A natural alternative to refined white sugar</li><li>Made without added chemicals or bleach</li><li>Hygienically packed and sealed</li><li>Delivered across India and worldwide</li></ul></div>
+</div></section>
+
+<section style="background:var(--iv2)" id="how"><div class="w"><div class="sh rv"><span class="lb">Ordering</span><h2>Simple &amp; Personal</h2><div class="ln"></div></div>
+<div class="steps rv"><div><i>I</i><h3>Choose</h3><p>Select your gud and quantity, from 500 g to 10 kg.</p></div><div><i>II</i><h3>Details</h3><p>Open your cart and enter name, phone, country and address.</p></div><div><i>III</i><h3>Confirm</h3><p>Your order reaches us on WhatsApp. We confirm dispatch.</p></div><div><i>IV</i><h3>Receive</h3><p>Pay cash on delivery in India. More options soon.</p></div></div></div></section>
+
+<div class="cta2" id="cta"><span class="lb">Taste the Difference</span><h2>Real gud. Real sweetness.</h2><a class="btn" href="#shop">Order Now</a></div>
+
+<section id="faq"><div class="w" style="max-width:820px"><div class="sh rv"><span class="lb">Questions</span><h2>Good to Know</h2><div class="ln"></div></div>
+<details><summary>Do you deliver outside India?</summary><p>Yes. Enter your country in the order form and we will confirm shipping charges and delivery time on WhatsApp.</p></details>
+<details><summary>How does Cash on Delivery work?</summary><p>Within India, you pay on delivery. A COD charge of ₹50 is added to the order.</p></details>
+<details><summary>How should I store the gud?</summary><p>Keep it in a clean, dry, airtight container, away from moisture. Dry-fruit varieties are best in a cool place.</p></details>
+<details><summary>Can I order in bulk or for gifting?</summary><p>Certainly. Message us on WhatsApp for bulk and gift orders.</p></details></div></section>
+
+<footer id="contact"><div class="fg"><div><a class="logo" href="#">Goga Ji<span>PURE DESI GUD</span></a><p style="margin-top:20px;max-width:320px">Pure desi jaggery, made the traditional way and delivered worldwide.</p></div>
+<div><h4>Explore</h4><a href="#shop">Collection</a><a href="#craft">The Craft</a><a href="#about">Story</a><a href="#faq">FAQ</a></div>
+<div><h4>Contact</h4><a href="https://wa.me/917900681476">WhatsApp +917900681476</a><a>Worldwide delivery</a></div></div>
+<div class="cp">© Goga Ji Gud · All rights reserved</div></footer>
+
+<a class="wa" href="https://wa.me/917900681476?text=Hello%20Goga%20Ji%20Gud" target="_blank" rel="noopener">WhatsApp</a>
+
+<div id="bar"></div>
+<div id="ov"></div>
+<aside id="dr"><div style="display:flex;justify-content:space-between;align-items:center"><h2>Your Order</h2><button class="ci" style="border:0;font-size:1.4rem" id="x" aria-label="Close">✕</button></div>
+<div class="tabs"><button id="t1" class="on">Cart</button><button id="t2">My Orders</button></div>
+<div id="p1"><div id="items"></div><div id="co" style="display:none"><div class="sum" id="sum"></div>
+<input id="nm" placeholder="Full name" autocomplete="name"><input id="ph" type="tel" inputmode="tel" placeholder="Phone / WhatsApp" autocomplete="tel"><input id="cn" placeholder="Country" autocomplete="country-name"><textarea id="ad" rows="2" placeholder="Full delivery address" autocomplete="street-address"></textarea>
+<div class="lb" style="margin-top:24px">Payment</div>
+<label class="pm"><input type="radio" name="pay" checked>Cash on Delivery (India) · ₹50 COD charge</label>
+<label class="pm d"><input type="radio" name="pay" disabled>UPI / Card / PayPal · coming soon</label>
+<button class="btn" style="width:100%;margin-top:24px" id="send">Place Order</button></div></div>
+<div id="p2" class="mo" style="display:none"></div><div id="p3" class="ok" style="display:none"></div></aside>
+
+<script>
+// ===== SETTINGS (edit here; price & COD are also editable in /admin) =====
+var WA="917900681476",RATE=250,COD_FEE=50,API="";
+// ========================================================================
+document.documentElement.classList.add('js');
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function $(i){return document.getElementById(i)}
+var tok=ls('gj_tok');if(!tok||tok.length<16){tok=Math.random().toString(36).slice(2)+Date.now().toString(36)+Math.random().toString(36).slice(2);ls('gj_tok',tok)}
+var st={cart:[],pf:{}};try{st=JSON.parse(ls('gj_st'))||st}catch(e){}
+function save(){ls('gj_st',JSON.stringify({cart:cart,pf:st.pf||{}}))}
+var P=[
+{id:'badam',n:'Badam Gud',i:'assets/badam.jpg',b:'Bestseller',d:'Soft desi gud with crunchy almond slivers.'},
+{id:'kaju',n:'Kaju Gud',i:'assets/kaju.jpg',b:'Rich & Creamy',d:'Golden jaggery with creamy cashew pieces.'},
+{id:'special',n:'Badam Special',i:'assets/special.jpg',b:'Festive Special',d:'Caramel-toned gud with generous almond flakes.'},
+{id:'kishmish',n:'Kishmish Gud',i:'assets/kishmish.jpg',b:'Naturally Sweet',d:'Sweet raisins folded into pure jaggery.'},
+{id:'plain',n:'Pure Desi Gud',i:'assets/plain.jpg',b:'Classic',d:'Unadulterated sugarcane jaggery, as it should be.'}];
+function pn(id){var r=P.filter(function(p){return p.id===id})[0];return r?r.n:null}
+function img(id){return P.filter(function(p){return p.id===id})[0].i}
+var cart=(st.cart||[]).filter(function(c){return pn(c.id)&&c.w>=0.5&&c.w<=50}).map(function(c){return {id:c.id,n:pn(c.id),w:c.w}});
+$('hero').style.backgroundImage='url(assets/hero.jpg)';
+$('cta').style.backgroundImage='url('+img('kaju')+')';
+document.querySelector('[data-img]').src=img('plain');
+$('mq').innerHTML=('<span>◆</span>Pure Desi Gud<span>◆</span>No Added Chemicals<span>◆</span>Almond · Cashew · Raisin<span>◆</span>Delivered Worldwide<span>◆</span>').repeat(8);
+var q={},g=$('g');
+P.forEach(function(p){q[p.id]=1;var c=document.createElement('div');c.className='card rv';
+c.innerHTML='<div class="im"><img alt="'+p.n+'" src="'+p.i+'"><span class="bd">'+p.b+'</span></div><div class="cb"><h3>'+p.n+'</h3><p>'+p.d+'</p><div class="pr">₹<span class="rate">'+RATE+'</span> <small>/ kg</small></div><div class="row"><div class="st"><button data-m="'+p.id+'" aria-label="Less">−</button><span><b id="w-'+p.id+'">1</b> kg</span><button data-p="'+p.id+'" aria-label="More">+</button></div><button class="add" data-id="'+p.id+'">Add to Cart</button></div></div>';g.appendChild(c)});
+function paint(){var r=document.querySelectorAll('.rate');for(var i=0;i<r.length;i++)r[i].textContent=RATE}
+g.onclick=function(e){var t=e.target,id=t.getAttribute('data-id'),mi=t.getAttribute('data-m'),pl=t.getAttribute('data-p');
+if(mi||pl){var k=mi||pl;q[k]=Math.min(50,Math.max(0.5,q[k]+(pl?0.5:-0.5)));$('w-'+k).textContent=q[k];return}
+if(!id)return;var f=cart.filter(function(x){return x.id===id})[0];
+if(f)f.w=Math.min(50,f.w+q[id]);else cart.push({id:id,n:pn(id),w:q[id]});save();render();
+if(innerWidth>860)op();else{var b=$('bar');b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop')}};
+function money(v){return '₹'+Math.round(v).toLocaleString('en-IN')}
+function isIn(){return $('cn').value.trim().toLowerCase()==='india'}
+function tot(){var t=0;cart.forEach(function(c){t+=c.w});return t}
+function render(){var h='';cart.forEach(function(c,i){h+='<div class="ci"><span>'+esc(c.n)+'<br><span class="qs"><button data-cm="'+i+'" aria-label="Less">−</button>'+c.w+' kg<button data-cp="'+i+'" aria-label="More">+</button></span></span><span style="text-align:right">'+money(c.w*RATE)+'<br><button data-r="'+i+'">REMOVE</button></span></div>'});
+$('items').innerHTML=h||'<p style="color:var(--mute);margin:30px 0">Your cart is empty.</p>';
+$('co').style.display=cart.length?'block':'none';$('cc').textContent=cart.length;sum();
+var b=$('bar');if(cart.length){b.classList.add('on');b.innerHTML='<span><b>'+tot()+' kg</b> · '+money(tot()*RATE)+'</span><button class="btn" id="bv">View Cart</button>'}else b.classList.remove('on')}
+function sum(){var s=tot()*RATE,f=isIn()?COD_FEE:0;
+$('sum').innerHTML='Items ('+tot()+' kg): '+money(s)+'<br>'+(isIn()?'COD charge: '+money(f):'Shipping: confirmed on WhatsApp')+'<br>Total &nbsp;<b>'+money(s+f)+'</b>'+(isIn()?'':' + shipping')}
+$('items').onclick=function(e){var t=e.target,r=t.getAttribute('data-r'),m=t.getAttribute('data-cm'),p=t.getAttribute('data-cp');
+if(r!==null)cart.splice(+r,1);else if(m!==null){var c=cart[+m];c.w-=0.5;if(c.w<0.5)cart.splice(+m,1)}else if(p!==null){var c2=cart[+p];c2.w=Math.min(50,c2.w+0.5)}else return;save();render()};
+['nm','ph','cn','ad'].forEach(function(id){var e=$(id);if(st.pf&&st.pf[id])e.value=st.pf[id];e.oninput=function(){st.pf=st.pf||{};['nm','ph','cn','ad'].forEach(function(k){st.pf[k]=$(k).value});save();sum()}});
+if(!$('cn').value)$('cn').value='India';
+var dr=$('dr'),ov=$('ov');
+function op(){tab(1);dr.classList.add('o');ov.classList.add('o')}function cl(){dr.classList.remove('o');ov.classList.remove('o')}
+function tab(n){$('p1').style.display=n===1?'block':'none';$('p2').style.display=n===2?'block':'none';$('p3').style.display=n===3?'block':'none';$('t1').className=n===1?'on':'';$('t2').className=n===2?'on':'';if(n===2)orders()}
+function orders(){var p=$('p2');p.innerHTML='<p style="margin:20px 0;color:var(--mute)">Loading…</p>';
+fetch(API+'/api/my-orders?token='+encodeURIComponent(tok)).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(l){
+p.innerHTML=l.length?l.map(function(o){return '<div class="o1"><b>'+esc(o.id)+'</b> <span class="stt">'+esc(o.status)+'</span><br><span style="color:var(--mute)">'+esc(o.created.slice(0,10))+'</span><br>'+o.items.map(function(i){return esc(i.name)+' × '+esc(i.kg)+' kg'}).join(', ')+'<br><b>'+money(o.total)+'</b></div>'}).join(''):'<p style="margin:20px 0;color:var(--mute)">No orders yet from this device.</p>'}).catch(function(){p.innerHTML='<p style="margin:20px 0;color:var(--mute)">Your order history will appear here once the store is live.</p>'})}
+$('cb').onclick=op;$('x').onclick=cl;ov.onclick=cl;$('t1').onclick=function(){tab(1)};$('t2').onclick=function(){tab(2)};
+$('bar').onclick=function(e){if(e.target.id==='bv'||e.target.tagName==='BUTTON')op()};
+function localOrder(b){var items=b.items.map(function(i){return {id:i.id,name:pn(i.id),kg:i.kg,amount:Math.round(i.kg*RATE)}}),it=0,kg=0;items.forEach(function(i){it+=i.amount;kg+=i.kg});var c=b.country.trim().toLowerCase()==='india'?COD_FEE:0;
+return {id:'GJ-'+Date.now().toString(36).toUpperCase(),items:items,kg:kg,items_total:it,cod:c,total:it+c,payment:c?'COD':'To be confirmed',local:true}}
+function fin(o,b){var m='Hello Goga Ji Gud, I placed this order:
+Order ID: '+o.id+'
+';o.items.forEach(function(i){m+='• '+i.name+' – '+i.kg+' kg = '+money(i.amount)+'
+'});
+m+='
+Items total: '+money(o.items_total)+'
+'+(o.cod?'Payment: Cash on Delivery (COD charge '+money(o.cod)+')
+Grand total: '+money(o.total):'Shipping: to be confirmed')+'
+
+Name: '+b.name+'
+Phone: '+b.phone+'
+Country: '+b.country+'
+Address: '+b.address;
+$('p3').innerHTML='<h3>Thank you!</h3><p style="margin:12px 0">Your order <b>'+esc(o.id)+'</b> is placed. Total: <b>'+money(o.total)+'</b>.<br>Last step: send it to us on WhatsApp so we can confirm.</p><a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent(m)+'">Send on WhatsApp</a>'+(o.local?'':'<p style="margin-top:18px;font-size:.8rem;color:var(--mute)">Your order is saved. Track it under My Orders.</p>');
+cart.length=0;save();render();tab(3)}
+$('send').onclick=function(){var b=$('send'),nm=$('nm').value.trim(),ph=$('ph').value.trim(),cn=$('cn').value.trim(),ad=$('ad').value.trim();
+if(nm.length<2||ph.length<6||cn.length<2||ad.length<5){alert('Please fill all details correctly.');return}
+var body={token:tok,name:nm,phone:ph,country:cn,address:ad,items:cart.map(function(c){return {id:c.id,kg:c.w}})};
+b.disabled=true;b.textContent='Placing order…';
+fetch(API+'/api/orders',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(o){fin(o,body)}).catch(function(){fin(localOrder(body),body)}).then(function(){b.disabled=false;b.textContent='Place Order'})};
+fetch(API+'/api/config').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(c){RATE=c.rate;COD_FEE=c.cod_fee;if(c.whatsapp)WA=c.whatsapp;paint();render()}).catch(function(){});
+$('mn').onclick=function(){$('nv').classList.toggle('open')};$('nv').onclick=function(){$('nv').classList.remove('open')};
+render();tab(1);
+window.addEventListener('scroll',function(){$('hd').classList.toggle('s',scrollY>60)});
+try{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.rv').forEach(function(el){io.observe(el)})}catch(e){document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')})}
+</script>
+
+</body>
+</html>
